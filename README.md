@@ -170,7 +170,7 @@ After all 3 clients send numbers:
 ## 👨‍💻 Author
 
 **Vivek Kumar**
-- GitHub: [@your_username](https://github.com/Vivek936)
+- GitHub: [@Vivek936](https://github.com/Vivek936)
 
 ---
 
