@@ -169,8 +169,8 @@ After all 3 clients send numbers:
 
 ## 👨‍💻 Author
 
-**Your Name**
-- GitHub: [@your_username](https://github.com/your_username)
+**Vivek Kumar**
+- GitHub: [@your_username](https://github.com/Vivek936)
 
 ---
 
