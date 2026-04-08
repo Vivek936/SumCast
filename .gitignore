@@ -1,0 +1,27 @@
+# .gitignore
+# Root mein banao — SumCast/.gitignore
+
+# Node modules — kabhi push mat karo!
+node_modules/
+frontend/node_modules/
+backend/node_modules/
+
+# Environment variables
+.env
+*.env
+
+# React build folder
+frontend/build/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
