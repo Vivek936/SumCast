@@ -1,9 +1,5 @@
-// src/components/SumCard.js
-// ✅ Latest sum dikhata hai — bada aur bold
-
 const SumCard = ({ data }) => {
 
-  // Agar koi data nahi hai
   if (!data) {
     return (
       <div className="no-data">
