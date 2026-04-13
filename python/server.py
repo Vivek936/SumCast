@@ -1,10 +1,7 @@
-# python/server.py - Phase 3
-# ✅ UDP server + HTTP POST to Node.js backend
-
 import socket
 import urllib.request  # HTTP request bhejne ke liye
 import urllib.error
-import json            # Data ko JSON format mein convert karne ke liye
+import json            
 
 # ─── CONFIGURATION ───────────────────────────────────────
 HOST = '127.0.0.1'
