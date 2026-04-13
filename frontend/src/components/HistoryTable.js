@@ -1,5 +1,3 @@
-// src/components/HistoryTable.js
-// ✅ Saare results ki table
 
 const HistoryTable = ({ results }) => {
 
