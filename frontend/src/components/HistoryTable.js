@@ -1,6 +1,6 @@
 
 const HistoryTable = ({ results }) => {
-
+ 
   const formatDate = (timestamp) => {
     const d = new Date(timestamp);
     return d.toLocaleString('en-IN', {
