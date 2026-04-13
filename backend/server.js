@@ -53,7 +53,6 @@ app.post('/save', async (req, res) => {
 
 
 // ─── API 2: GET /results ─────────────────────────────────
-// React frontend yahan se data fetch karega
 app.get('/results', async (req, res) => {
   try {
     // Saare results lo, latest pehle (-1 = descending order)
