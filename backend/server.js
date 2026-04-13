@@ -7,19 +7,19 @@ const Result = require('./models/Result');
 const app = express();
 const PORT = 5000;
 
-// ─── MIDDLEWARE ──────────────────────────────────────────
+
 app.use(cors());              
 app.use(express.json());      
-// ─────────────────────────────────────────────────────────
 
-// ─── MONGODB CONNECTION ──────────────────────────────────
+
+
 mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log('✅ MongoDB se connect ho gaya!'))
   .catch((err) => console.log('❌ MongoDB error:', err));
-// ─────────────────────────────────────────────────────────
 
 
-// ─── API 1: POST /save ───────────────────────────────────
+
+
 app.post('/save', async (req, res) => {
   try {
     console.log('\n📩 Python se data aaya:', req.body);
@@ -36,7 +36,6 @@ app.post('/save', async (req, res) => {
       sum
     });
 
-    // Database mein save karo
     await newResult.save();
 
     console.log('💾 MongoDB mein save ho gaya!');
@@ -50,13 +49,13 @@ app.post('/save', async (req, res) => {
     res.status(500).json({ error: 'Server error aaya' });
   }
 });
-// ─────────────────────────────────────────────────────────
 
 
-// ─── API 2: GET /results ─────────────────────────────────
+
+
 app.get('/results', async (req, res) => {
   try {
-    // Saare results lo, latest pehle (-1 = descending order)
+
     const results = await Result.find().sort({ timestamp: -1 });
 
     console.log(`📤 ${results.length} results bhej rahe hain frontend ko`);
@@ -67,10 +66,10 @@ app.get('/results', async (req, res) => {
     res.status(500).json({ error: 'Server error aaya' });
   }
 });
-// ─────────────────────────────────────────────────────────
 
 
-// ─── SERVER START ─────────────────────────────────────────
+
+
 app.listen(PORT, () => {
   console.log(`\n🚀 Node.js server chal raha hai: http://localhost:${PORT}`);
   console.log('📌 Available APIs:');
