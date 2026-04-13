@@ -1,19 +1,14 @@
-// backend/server.js
-// ✅ Express server with 2 APIs:
-//    POST /save   → Python se data receive karo, MongoDB mein save karo
-//    GET  /results → Saare results return karo
-
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
-const Result = require('./models/Result');  // Hamara schema
+const Result = require('./models/Result');
 
 const app = express();
 const PORT = 5000;
 
 // ─── MIDDLEWARE ──────────────────────────────────────────
-app.use(cors());              // React frontend allow karo
-app.use(express.json());      // JSON body parse karo
+app.use(cors());              
+app.use(express.json());      
 // ─────────────────────────────────────────────────────────
 
 // ─── MONGODB CONNECTION ──────────────────────────────────
@@ -24,19 +19,17 @@ mongoose.connect(process.env.MONGO_URI)
 
 
 // ─── API 1: POST /save ───────────────────────────────────
-// Python UDP server yahan data bhejega
 app.post('/save', async (req, res) => {
   try {
     console.log('\n📩 Python se data aaya:', req.body);
 
     const { clientValues, sum } = req.body;
 
-    // Validate karo
+
     if (!clientValues || sum === undefined) {
       return res.status(400).json({ error: 'clientValues aur sum required hai!' });
     }
 
-    // MongoDB mein naya document banao
     const newResult = new Result({
       clientValues,
       sum
