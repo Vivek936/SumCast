@@ -4,13 +4,13 @@ const mongoose = require('mongoose');
 const ResultSchema = new mongoose.Schema({
 
   clientValues: {
-    type: [Number],   // e.g. [5, 3, 7]
+    type: [Number],
     required: true
   },
 
-  // Calculated sum
+ 
   sum: {
-    type: Number,     // e.g. 15
+    type: Number,   
     required: true
   },
 
