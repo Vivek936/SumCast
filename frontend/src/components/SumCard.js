@@ -10,7 +10,6 @@ const SumCard = ({ data }) => {
     );
   }
 
-  // Date format karo — readable banao
   const formatDate = (timestamp) => {
     const d = new Date(timestamp);
     return d.toLocaleString('en-IN', {
